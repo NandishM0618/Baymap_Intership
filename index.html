@@ -16,29 +16,33 @@
         <div class="logo">
           <p>BAYMAP</p>
         </div>
-        <ul>
-          <li>
-            <a href="#" class="menu-item active" data-target="home-slider"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a href="#" class="menu-item" data-target="people-slider">People</a>
-          </li>
-          <li>
-            <a href="#" class="menu-item" data-target="research-slider"
-              >Research</a
-            >
-          </li>
-          <li>
-            <a href="#" class="menu-item" data-target="connect-slider"
-              >Connect</a
-            >
-          </li>
-        </ul>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="#" class="menu-item active" data-target="home-slider"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu-item" data-target="people-slider"
+                >People</a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu-item" data-target="research-slider"
+                >Research</a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu-item" data-target="connect-slider"
+                >Connect</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="navbar-toggle" onclick="toggleNavbar()">&#9776;</div>
     </nav>
-
     <div class="slider-container">
       <!-- HOME PAGE -->
       <div class="slider-wrapper" id="home-slider">
@@ -461,32 +465,10 @@
       </div>
     </div>
     <script>
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   // Simulate a delay to showcase the typing animation
-      //   setTimeout(function () {
-      //     // Initialize Typed.js on an element with the class 'typing-element'
-      //     var typed = new Typed(".typing-element", {
-      //       strings: ["SPIDR - OX", ""],
-      //       typeSpeed: 50,
-      //       backSpeed: 20,
-      //       startDelay: 500,
-      //       backDelay: 1000,
-      //       onComplete: function () {
-      //         document.querySelector(".loading-screen").style.display = "none";
-      //       },
-      //       onTypingResumed: function () {
-      //         document.querySelector(".typing-element").style.color = "white";
-      //       },
-      //       onTypingPaused: function () {
-      //         document.querySelector(".typing-element").style.color =
-      //           "transparent";
-      //       },
-      //       onReset: function () {
-      //         document.querySelector(".typing-element").style.color = ""; // This will reset to the default color
-      //       },
-      //     });
-      //   }, 4000);
-      // });
+      function toggleNavbar() {
+        var navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      }
     </script>
     <script src="app.js"></script>
   </body>
